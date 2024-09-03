@@ -6,6 +6,6 @@ export const readContacts = async () => {
     const data = await fs.readFile(PATH_DB, 'utf-8');
     return JSON.parse(data);
   } catch (error) {
-    console.log(error);
+    console.log('Error reading contacts:', error);
   }
 };
